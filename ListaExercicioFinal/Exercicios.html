@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+     <label> Adiciona Itens a Lista Digitando aqui: </label>
+     <input type="text" value="" id="Descricao"/><br><br>
+    <div id= "CriandoLista">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <button onclick= "ClickResposta()" id="botao">Adicionar</button>
+    <script>
+        function ClickResposta()
+        {
+            var Textodigitado = document.getElementById('Descricao').value
+            var lista = document.querySelector('#CriandoLista UL')
+            var novoItem = document.createElement('li');
+            novoItem.textContent = Textodigitado;
+            lista.appendChild (novoItem);
+            document.getElementById('Descricao').value = '';
+
+            
+        }
+    </script>
+   
+</body>
+</html>
